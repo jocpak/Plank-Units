@@ -1,0 +1,164 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LaTeX book template                           %%
+%% Author:  Amber Jain (http://amberj.devio.us/) %%
+%% License: ISC license                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,11pt]{book}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=15mm,
+ bottom=15mm}
+ 
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\setlength{\parindent}{0pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Source: http://en.wikibooks.org/wiki/LaTeX/Hyperlinks %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+
+\usepackage[
+backend=biber,
+style=alphabetic,
+sorting=ynt
+]{biblatex}
+ 
+\addbibresource{mybibliography.bib}
+ 
+
+% Book's title and subtitle
+\title{\Huge \textbf{Introduction to Mechanics} \\ \huge Latex Assigment 1} 
+% Author
+\author{\textsc{Jocilyn Cara Pak}}
+
+
+\begin{document}
+
+\mainmatter
+\maketitle
+\let\cleardoublepage\clearpage
+
+\chapter*{Plank Units}
+
+\justify 
+
+The main Plank Units are \textit{natural} units calculated by square rooting the dimensional derivatives of the four fundamental physical constants in order to find the length, mass, time, charge, and temperature. By using the values of the universal constants, rather than relying on the human measurement system, Plank units refer to the magnitude of standard for each base unit. These natural units can be found by setting Plank's constant, \hbar, \textup{the speed of light}, c, \textup{the gravitational  constant}, G,  \textup{and Boltzmann's constant}, 
+\linebreak
+k_B, \textup {to normalize into the numerical value 1} \cite{Hsu}. 
+
+\center
+
+\begin{Equation} \hbar = c = k_B = G = 1 \end{Equation} 
+
+\hfill
+
+In other words, any equation that expresses the natural physical constants should be dropped when physical quantities are expressed in terms of Plank units. For example, if the equation states  $v= \frac{1}{4} c \end{$}, normalizing the equation would make $v= \frac{1}{4} \end{$}. This simplifies the dimensional process because you choose units that make the specific physical constant equal to one, or in this case, c to one, which ultimately binds the units to ratios of the power of c. In theoretical physics, this process is called nondimensionalization. 
+
+
+\begin{flushleft}
+\subsection{Physical Constants Normalized with Plank Units \cite{Johnson}}
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+ Constant & Symbol & SI equivalent & Dimensions \\ \hline
+ Speed of Light & \textit{c} & 3.0 x 10^{8} \frac{m}{s} & LT^{-1} \\
+ Gravitational Constant & \textit{G} & 6.67 x 10^{-11} \frac {N m^2}{kg^2} & L^3 M^{-1} T^2\\
+ Reduced Plank Constant & h/2\pi & 1.05 x 10^{-34} J \cdot s & L^2MT^{-1}\\
+ Boltzmann Constant & k_B & 1.38 x 10^{-23} \frac{J}{K} & L^2 M T^{-2} \Theta^{-1} \\
+ 
+ \hline
+\end{tabular}
+\end{center}
+\end{flushleft}
+
+The formula for a plank unit can be derived by dimensional analyses of the physical constants above. 
+
+\hfill
+
+For example,, where \textit{qpr} are considered constants by matching the dimensions of the equation, the dimensional analysis for a Planck mass would be as follows: 
+\hfill \break 
+
+M^1= G^p \hbar^q c^r 
+
+$[G^p] \end{$ }= $\frac{L^{3p}}{T^{2p}m^p}\end{$} \quad $[\hbar^q] \end{$}= $\frac{{L^{2q}m^q}}{T^q} \end{$} \quad $[c^r] \end{$} = $\frac{L^r}{T^r} \end{$}
+\hfill \break 
+
+Grouping like terms would make: 
+
+M 1= q-p; \quad 
+L 0 = 3p + 2q + r; \quad 
+T 0 = 2p + q + r 
+
+\hfill \break
+Rearranging the mass equation would make q= p + 1. 
+\hfill 
+
+L 0 = 3p + 3(p+1) + r \rightarrow 5p+ 2 + 4; \quad 
+T 0 = 2p + (p+1) + r \rightarrow 3p + 1 + r 
+
+\hfill 
+
+Substituting in q for p+1 would give two simultaneous equations. Grouping like terms would make the equation: 
+
+\hfill
+
+0= (5p- 3p) + (2-1) + (r-r) \rightarrow 
+0= 2p+ 1 \rightarrow
+p= -1/2
+
+\hfill 
+
+q= p + 1 \rightarrow q= 1/2 
+
+\hfill 
+
+Substituting the value of p= 1/2 and plugging it into one of two equations above, then 3(-1/2)+ 1+ r \rightarrow r= 1/2 
+
+\hfill 
+
+M= G^{-\frac{1}{2}} \hbar^{\frac{1}{2}} c^{\frac{1}{2}} \rightarrow
+M= $\sqrt{\frac{c \hbar}{G}} \end{$}= $2.18 \textup{x} 10^{-8}\end{$}; which coincides with the expression on the chart below 
+
+\subsection{Plank Units \cite{Johnson}}
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+ Name & Expression & SI equivalent & Dimensions \\ \hline
+ Length & \ell_{p}= \sqrt{\frac{Gh}{c^3}} & 1.61 x 10^{-35} m & L \\
+ Mass & \textit{m}_p = \sqrt{\frac{ch}{G}} & 2.18 x 10^{-8} kg & M \\
+ Time & \textit{t}_p = \sqrt{\frac{hG}{c^5}} & 5.39 x 10^{-44} s & T\\
+ Temperature & \textit{T}_p = \sqrt{\frac{hc}{k_e}} & 1.41 x 10^{32} \textit{K} & \Theta \\
+ Charge & \textit{E}_p= \sqrt{\frac{hg}{c^5}} & 1.88 x 10^{-18} C & Q\\
+ 
+ \hline
+\end{tabular}
+\end{center}
+
+
+\hfill
+\justify 
+
+Plank units differ from SI units because the base standard of unit varies depending on the particular combination of universal constants. The Plank length ($\ell_p\end{$}) expresses a quantity with the dimension of length. The Plank mass ($m_p\end{$}) is equivalent to a quantity with the dimension of mass. The Plank constant describes the quanta of radiation and possesses the units of angular momentum. There are other derived Plank units, such as the Plank area and volume, that are not listed on the table because the orders of magnitude are either numerically too small or large for practical use \cite{Manin}. Overall, these units act as a base standard  with the dimensions of the quantity remaining the same, but hidden implicitly by setting the universal constants equal to one \cite{Hsu}. 
+
+\hfill 
+
+\subsection{Possible Drawbacks}
+In order for the nondimensionalization to work in a given equation, the fundamental constants are equal to one, and the rest of the equation are understood to be dimensionless numerical values measured in Plank units. Because they are dimensionless, it can represent a loss of information or lead to confusion if one does not realize that the equation is set into a Plank scale. However, one can always recover the lost units by working backwards.
+
+\hfill
+
+As stated earlier, the Planck constants are not used because its scale is only relevant in theoretical physics. While gravity and the speed of lights constant express a general relativity theory and the speed of light and the reduced Plank's constant express a relativistic quantum field theory, a complete quantum theory linking gravity, the speed of light, and Plank's constant does not exist \cite{University New South Wales}. Therefore, the use of Plank units are very limited, but nonetheless, has potential of becoming a "self-consisting set of fundamental and universal quantities for the study of physical phenomena" \cite{Buczyna}. 
+
+
+
+\end{document} 
